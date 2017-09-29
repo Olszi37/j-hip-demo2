@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "client",
+            "otherEntityName": "client",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "room",
+            "otherEntityName": "room",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date_from",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "date_to",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20170731154030",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "reservation",
+    "pagination": "pager"
+}

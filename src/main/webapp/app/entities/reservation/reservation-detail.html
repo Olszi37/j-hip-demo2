@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Reservation</span> {{vm.reservation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Date From</span></dt>
+        <dd>
+            <span>{{vm.reservation.date_from | date:'medium'}}</span>
+        </dd>
+        <dt><span>Date To</span></dt>
+        <dd>
+            <span>{{vm.reservation.date_to | date:'medium'}}</span>
+        </dd>
+        <dt><span>Client</span></dt>
+        <dd>
+            <a ui-sref="client-detail({id:vm.reservation.client.id})">{{vm.reservation.client.name}}</a>
+        </dd>
+        <dt><span>Room</span></dt>
+        <dd>
+            <a ui-sref="room-detail({id:vm.reservation.room.id})">{{vm.reservation.room.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="reservation-detail.edit({id:vm.reservation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>
